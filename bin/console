@@ -13,7 +13,7 @@ case "$1" in
         cd nginx/tls || exit -1
         openssl req -x509 -subj '/CN=ist-env-emulator.localhost/O=ist-env-emulator' -out ist-env-emulator.pem -days 365 \
                 -newkey rsa:4096 -nodes -keyout ist-env-emulator.key
-        exit 0 ;;
+        ARGS="build" ;;
     "mysql")
         ARGS="exec mysql bash -c 'cd /var/www/ist-env-emulator && mysql -h mysql -u $DB_APP_USER -p$DB_APP_PASSWORD'";;
     "logs")
