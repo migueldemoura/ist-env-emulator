@@ -1,8 +1,8 @@
 # IST Environment Emulator
 
-This projects aims to provide easier way of doing assignments and projects that will also work when tested on the official [Técnico Lisbon (IST)] web environment. It attempts to replicate most aspects of the IST web services and to allow the students to not rely on SFTP/SSH/SCP as suggested by some teachers. It also serves as an alternative to installing LAMP/MAMP/WAMP.
+The IST Environment Emulator aims to provide an easier and quicker way of finishing IST assignments and projects, while remaining compatible with the official [Técnico Lisbon (IST)] web environment. It attempts to replicate most of its configuration and allow the students not to rely on SSH/SCP/SFTP as suggested by some teachers. It also serves as an alternative to installing LAMP/MAMP/WAMP.
 
-As for configuration differences, IST uses Apache as its web server, but this project uses Nginx. Strict CSP rules and PHP settings are enforced in an effort of developing good habits. These can be adapted or removed by modifying `deployment/nginx/nginx.conf` and `deployment/php/php.ini`.
+As for configuration differences, IST uses Apache as its web server, but this project uses Nginx. Strict CSP rules and PHP settings are enforced in an effort of developing good habits. These can be adjusted or even removed by modifying `deployment/nginx/nginx.conf` and `deployment/php/php.ini`.
 
 ### Installation and Deployment
 
