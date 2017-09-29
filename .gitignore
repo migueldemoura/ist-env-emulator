@@ -1,0 +1,8 @@
+app/src/settings.php
+app/vendor/
+app/composer.lock
+backups/
+deployment/.env
+deployment/nginx/tls/ist-env-emulator.key
+deployment/nginx/tls/ist-env-emulator.pem
+!.keep
