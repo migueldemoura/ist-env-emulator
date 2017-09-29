@@ -1,6 +1,6 @@
 # IST Environment Emulator
 
-The IST Environment Emulator aims to provide an easier and quicker way of finishing IST assignments and projects, while remaining compatible with the official [Técnico Lisbon (IST)] web environment. It attempts to replicate most of its configuration and allow the students not to rely on SSH/SCP/SFTP as suggested by some teachers. It also serves as an alternative to installing LAMP/MAMP/WAMP.
+The IST Environment Emulator aims to provide an easier and quicker way of finishing IST assignments and projects, while remaining compatible with the official [Técnico Lisboa (IST)] web environment. It attempts to replicate most of its configuration and allow the students not to rely on SSH/SCP/SFTP as suggested by some teachers. It also serves as an alternative to installing LAMP/MAMP/WAMP.
 
 As for configuration differences, IST uses Apache as its web server, but this project uses Nginx. Strict CSP rules and PHP settings are enforced in an effort of developing good habits. These can be adjusted or even removed by modifying `deployment/nginx/nginx.conf` and `deployment/php/php.ini`.
 
@@ -50,7 +50,7 @@ Using the flag `-f` activates follow log output. You may also specify the servic
 
 See `License.md`
 
-   [Técnico Lisbon (IST)]: <https://tecnico.ulisboa.pt/>
+   [Técnico Lisboa (IST)]: <https://tecnico.ulisboa.pt/>
    [Composer]: <https://getcomposer.org/download/>
    [Docker]: <https://docs.docker.com/engine/installation/>
    [Docker Compose]: <https://docs.docker.com/compose/install/>
