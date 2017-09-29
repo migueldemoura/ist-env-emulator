@@ -1,0 +1,14 @@
+{
+    "name": "migueldemoura/ist-env-emulator",
+    "description": "IST Environment Emulator",
+    "keywords": ["IST", "Environment", "Emulator"],
+    "homepage": "https://github.com/migueldemoura/ist-env-emulator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel de Moura",
+            "email": "me@migueldemoura.com",
+            "homepage": "https://migueldemoura.com/"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+    mysql:
+        image: mysql:5.5.54
+        volumes:
+            - data-mysql:/var/lib/mysql
+        ports:
+            - 127.0.0.1:3306:3306
+        volumes:
+            - ../app:/var/www/ist-env-emulator
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER: ${DB_APP_USER}
+            MYSQL_PASSWORD: ${DB_APP_PASSWORD}
+        # Charset and collation would idealy be utf8mb4 and utf8mb4_unicode_ci, respectively
+        command: --character-set-server=latin1 --collation-server=latin1_swedish_ci
+        security_opt:
+             - no-new-privileges
+    php:
+        build: php
+        volumes:
+            - ../app:/var/www/ist-env-emulator:ro
+        security_opt:
+            - no-new-privileges
+    composer:
+        build: composer
+        user: www-data
+        command: install
+        volumes:
+            - ../app:/var/www/ist-env-emulator
+        security_opt:
+            - no-new-privileges
+    nginx:
+        build:
+            context: nginx
+            args:
+                SERVER_NAME: ist-env-emulator.localhost
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ../app/public:/var/www/ist-env-emulator/public:ro
+        security_opt:
+            - no-new-privileges
+
+volumes:
+    data-mysql:
+        driver: local
